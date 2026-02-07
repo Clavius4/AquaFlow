@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardiff Swim Centre is the premier swimming pool for premier swimmers in the heart of Wales.">
+    <title>Home │ Cardiff Swim Centre</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- NAVBAR: Built with Bootstrap navbar component as a basis, and styled with custom CSS. -->  
+        <nav class="navbar navbar-expand-lg navbar-bg">
+            <div class="container-fluid">   
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.webp" alt="Cardiff Swim Centre Logo" width="120" height="120"></a>
+                <button class="navbar-toggler hvr-grow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-active" aria-current="page" href="index.html">Home</a>
+                            <div class="underline-circle-outer">
+                                <div class="d-none d-md-block underline-circle-inner"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="timetable.html">Timetable</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="nav-join d-none d-lg-block hvr-grow" type="button" data-bs-toggle="modal" data-bs-target="#joinModal">Join</button>
+                </div>
+            </div>
+        </nav>
+        <!-- MODAL: Built with Bootstrap component. Designed to be a consistent CTA throughout the site and drive site users to join as members. -->
+        <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close hvr-grow" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="modal-title my-5" id="joinModalLabel">Start your membership today:</h3>
+                                    <p class="mb-5">Thank you for deciding to join us for a premier swimming experience. Please fill out the details below, submit, then the frontdesk will take payment details when you next visit us.</p>
+                                    <form method="POST" action="https://formdump.codeinstitute.net/">
+                                        <div class="mb-3">
+                                            <label for="yourname" class="form-label">Full Name</label>
+                                            <input type="text" id="yourname" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" id="email" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tel" class="form-label">Phone number</label>
+                                            <input type="tel" id="tel" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input id="submit-button" class="hvr-grow" type="submit" value="Submit"> 
+                                            <input id="reset-button" class="hvr-grow" type="reset" value="Reset">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HERO IMAGE: Section built around the main CTA: Membership conversion -->
+    <!-- Image credit: Gentrit Sylejmani, Unsplash -->
+    <section>
+        <div class="container-fluid hero-image-cta">
+            <div class="row">
+                <div class="col-12">
+                    <div class="container-fluid hero-image-text text-center">
+                        <h1 class="text-center">Just keep swimming</h1>
+                        <h3 class="text-center">Train at Cardiff's premier pool for premier swimmers</h3>
+                        <button class="hvr-grow text-center" type="button" data-bs-toggle="modal" data-bs-target="#joinModal">Join now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FEATURES: This section is designed to communicate the facilities to a site user quickly and also stress the value of getting a membership -->
+    <section class="features-section my-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col my-5">
+                    <div class="card home-features text-center" id="card-pool">
+                        <div class="card-header text-center" id="card-header-pool">
+                            <h2>World class pool</h2>
+                        </div>
+                        <div class="card-body home-features pool-card">
+                            <ul class="mt-3">
+                                <li><i class="fas fa-check"></i>Olympic-sized 50m pool</li>
+                                <li><i class="fas fa-check"></i>16m depth at deepest point</li>
+                                <li><i class="fas fa-check"></i>3m, 10m and springboard diving boards</li>
+                                <li><i class="fas fa-check"></i>Training equipment available</li>
+                            </ul>
+                            <a href="about.html#facilities-section" class="pool-button my-5 hvr-grow black" role="button">Facilities</a>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-5">
+                    <div class="card home-features text-center" id="card-benefits">
+                        <div class="card-header home-features text-center" id="card-header-benefits">
+                            <h2>Member benefits</h2>
+                        </div>
+                        <div class="card-body home-features home-members-card">
+                            <ul class="mt-3">
+                                <li><i class="fas fa-check"></i>Free access to equipment</li>
+                                <li><i class="fas fa-check"></i>12-week training programme</li>
+                                <li><i class="fas fa-check"></i>Lane booking</li>
+                                <li><i class="fas fa-check"></i>Free access to training classes</li>
+                            </ul>                         
+                            <a href="pricing.html" class="benefits-button my-5 hvr-grow black" role="button">See Prices</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMPANY ETHOS: Gives site users an impression of the company as trustworthy and communicates values clearly --> 
+    <section class="my-5">
+        <div class="container ethos-container">
+            <div class="row">
+                <div class="col-12 col-lg-6 ethos-text">
+                    <h2>Our ethos</h2>
+                    <p>We founded the Cardiff Swim Centre in 2006 to give a premier swimming experience devoid of busy lanes, long queues and packed changing rooms.</p>
+                    <p>Like our customers, we believe in being the best. We’ve put training at heart of your experience with us.</p>
+                    <a href="about.html" class="hvr-grow ethos-container-button text-center" role="button">Get to know us</a>
+                </div>
+                <div class="d-none d-lg-inline-block col-md-6 ethos-image-grid">
+                    <div class="grid-container">
+                        <div class="grid-item item-1">
+                            <!-- Image credit: Brian Matangelo, Unsplash -->
+                            <img class="hvr-grow" src="assets/images/ethos-image-1.webp" alt="Swimmer gasping for air mid-stroke">
+                        </div>
+                        <div class="grid-item item-2">
+                            <!-- Image credit: Malik Skydsgaard, Unsplash -->
+                            <img class="hvr-grow" src="assets/images/ethos-image-2.webp" alt="Female swimmer standing while putting on goggles">
+                        </div>
+                        <div class="grid-item item-3">
+                            <!-- Image credit: Jesper Stechmann, Unsplash -->
+                            <img class="hvr-grow" src="assets/images/ethos-image-3.webp" alt="Portrait view of a swimming pool with lanes">
+                        </div>
+                        <div class="grid-item item-4">
+                            <!-- Image credit: Marcelo Uva, Unsplash -->
+                            <img class="hvr-grow" src="assets/images/ethos-image-4.webp" alt="Underwater shot of three swimmers diving">
+                        </div>
+                        <div class="grid-item item-5">
+                            <!-- Image credit: Dylan Nolte, Unsplash -->
+                            <img class="hvr-grow" src="assets/images/ethos-image-5.webp" alt="Female swimmer diving off a diving block into a pool">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+    <!-- LOCATION -->
+    <section>
+        <div class="container location-container">
+            <div class="row">
+                <h2>Come see us <i class="fas fa-map-pin"></i></h2>
+                <div class="col-12 col-md-6 location-map" id="location-map-anchor">
+                    <iframe class="google-map" src="https://www.google.com/maps/d/embed?mid=1_3bTwG-MGzAu8UvobcHqGTp1nBvq9pjh"></iframe>
+                </div>
+                <div class="col-12 col-md-6 location-text">
+                    <ul>
+                        <li><i class="far fa-clock"></i>Open 8am-6pm on weekdays, 8am-10pm on weekends</li>
+                        <li><i class="fas fa-parking"></i>Free parking, validate ticket at front desk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER: Two versions, one for smaller screens and one for medium and up devices. This is to ensure design is fully optimised based on screen size. -->
+    <footer>
+        <div class="container-fluid footer-container-desktop d-none d-md-block col-12">
+            <div class="row">
+                <div class="footer-text">
+                    <ul class="footer-ctas">
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="index.html#location-map-anchor">How to get to us</a>
+                        </li>
+                    </ul>
+                    <ul class="social-media-links">
+                        <li>
+                            <!-- Credit for accessibility measures in social media icons: Mário Gusman -->
+                            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-twitter"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-facebook"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-youtube"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid footer-container-mobile">
+            <div class="row d-md-none">
+                <div class="col-12 footer-text-mobile">
+                    <p class="footer-ctas-mobile"><a href="contact.html">Contact</a> │ <a href="pricing.html">Pricing</a> │ <a href="#location-map-anchor">Location</a></p>
+                    <ul class="social-media-links-mobile">
+                        <li>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-twitter"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-facebook"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-youtube"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script defer async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+</html>
