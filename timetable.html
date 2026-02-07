@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timetable of Cardiff Swim Centre's pool times and training classes.">
+    <title>Timetable │ Cardiff Swim Centre</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- NAVBAR: Built with Bootstrap navbar component as a basis, and styled with custom CSS. -->  
+        <nav class="navbar navbar-expand-lg navbar-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.webp" alt="Cardiff Swim Centre Logo" width="120" height="120"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-active" aria-current="page" href="timetable.html">Timetable</a>
+                            <div class="underline-circle-outer-timetable">
+                                <div class="d-none d-md-block underline-circle-inner-timetable"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="nav-join d-none d-lg-block" type="button" data-bs-toggle="modal" data-bs-target="#joinModal">Join</button>
+                </div>
+            </div>
+        </nav>
+        <!-- MODAL: Built with Bootstrap component. Designed to be a consistent CTA throughout the site and drive site users to join as members. -->
+        <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="modal-title mt-2 mb-5" id="joinModalLabel">Start your membership today:</h3>
+                                    <p class="mb-5">Thank you for deciding to join us for a premier swimming experience. Please fill out the details below, submit, then the frontdesk will take payment details when you next visit us.</p>
+                                    <form method="POST" action="https://formdump.codeinstitute.net/">
+                                        <div class="mb-3">
+                                            <label for="yourname" class="form-label">Full Name</label>
+                                            <input type="text" id="yourname" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" id="email" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tel" class="form-label">Phone number</label>
+                                            <input type="tel" id="tel" class="form-input" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input id="submit-button" class="hvr-grow" type="submit" value="Submit"> 
+                                            <input id="reset-button" class="hvr-grow" type="reset" value="Reset">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="my-5 text-center">Pool Timetable</h1>
+    </div>
+    <!-- TIMETABLE: This feature is a crucial feature for all user journeys. It is essential that site users are able to know which times the pool will be open for their specific needs, e.g. lane swimming or attending classes. 
+    For mobile view, I had planned to include a toggle-down button to select which day. This was not achievable within the scope of this project so instead I made the table responsible with horizontal scroll on mobile view. -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Weekly Schedule</h2>
+        </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Time</th>
+                            <th scope="col">MON</th>
+                            <th scope="col">TUES</th>
+                            <th scope="col">WED</th>
+                            <th scope="col">THURS</th>
+                            <th scope="col">FRI</th>
+                            <th scope="col">SAT</th>
+                            <th scope="col">SUN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-time">8:00</th>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="3">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="2">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="2">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim">Members-only Lane Swim</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">9:00</th>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="2">Open to all Lane Swim</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">10:00</th>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="2">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training">Kick Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">11:00</th>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="4">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="3">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training">Speed Training</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="6">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="4">Open to all Lane Swim</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">12:00</th>
+                            <td class="table-cell-activity table-cell-activity-training">Stroke Training</td>
+                            <td class="table-cell-activity table-cell-activity-training" rowspan="2">Kick Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">13:00</th>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="5">Open to all Lane Swim</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">14:00</th>
+                            <td class="table-cell-activity table-cell-activity-training">Stroke Training</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="5">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training" rowspan="2">Speed Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">15:00</th>
+                            <td class="table-cell-activity table-cell-activity-training">Kick Training</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="3">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training" rowspan="2">Kick Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">16:00</th>
+                            <td class="table-cell-activity table-cell-activity-open-swim" rowspan="3">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>       
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">17:00</th>
+                            <td class="table-cell-activity table-cell-activity-members-swim">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training">Stroke Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">18:00</th>
+                            <td class="table-cell-activity table-cell-activity-members-swim">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training">Speed Training</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim">Open to all Lane Swim</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">19:00</th>
+                            <td class="table-cell-activity table-cell-activity-members-swim">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-open-swim">Open to all Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-members-swim" rowspan="3">Members-only Lane Swim</td>
+                            <td class="table-cell-activity table-cell-activity-training" rowspan="3">Stroke Training</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">20:00</th>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">21:00</th>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-time">22:00</th>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                            <td class="table-cell-activity table-cell-activity-closed">CLOSED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- FURTHER INFORMATION: I have included a PDF of the timetable here as many swimmers like to have a paper copy of their local pool timetables to hang up in their homes for quick access. I included a QR code to the website on the PDF so users can be directed back to the website if they print this PDF. -->
+    <section>
+        <div class="container">
+            <a href="assets/downloadables/pool-timetable.pdf" target="_blank" class="text-center timetable-button mb-5 hvr-grow" role="button">Timetable as PDF</a>
+        </div>
+        <div class="container further-info">
+            <h2 class="mb-3">Please note:</h2>
+            <p><i class="far fa-clock"></i>  The Open Water Pod is open every day from 1pm-3pm</p>
+        </div>
+    </section>
+    <!-- FOOTER: Two versions, one for smaller screens and one for medium and up devices. This is to ensure design is fully optimised based on screen size. -->
+    <footer>
+        <div class="container-fluid footer-container-desktop d-none d-md-block col-12">
+            <div class="row">
+                <div class="footer-text">
+                    <ul class="footer-ctas">
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="index.html#location-map-anchor">How to get to us</a>
+                        </li>
+                    </ul>
+                    <ul class="social-media-links">
+                        <li>
+                            <!-- Credit for accessibility measures in social media icons: Mário Gusman -->
+                            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-twitter"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-facebook"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-youtube"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid footer-container-mobile">
+            <div class="row d-md-none">
+                <div class="col-12 footer-text-mobile">
+                    <p class="footer-ctas-mobile"><a href="contact.html">Contact</a> │ <a href="pricing.html">Pricing</a> │ <a href="index.html#location-map-anchor">Location</a></p>
+                    <ul class="social-media-links-mobile">
+                        <li>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-twitter"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-facebook"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                                <i aria-hidden="true" class="fab fa-youtube"></i>
+                                <span class="sr-only">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script defer async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
