@@ -1,0 +1,1173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* Fix: html rule eliminated horizontal scrollbar bug on mobile view. Credit: https://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers */
+
+html {
+    overflow-x: hidden !important; 
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h4 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* fix: Fixed line spacing error in list items by removing bottom padding on tick icon */
+
+.fa-check {
+    color: #66C793;
+    font-size: 20px;
+    padding-right: 6px;
+    
+}
+
+li {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/* BUTTONS */ 
+/* fix: Addded <a> color style to ensure all buttons were inline with accessability standards */
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a.black:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+#error-button {
+    border: none;
+    width: 12em;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #FD4505;
+    margin-top: 34px;
+
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+    .pool-button, .benefits-button {
+        margin-top: 0;
+        width: 8em;
+        height: 2em;
+        font: 20px;
+        line-height: 37px;
+    }
+
+}
+
+.pool-button {
+    background-color: #FFF;
+    border-color: #19DDEC;
+    border-width: 3px;
+    border-radius: 50px;
+    border-style: solid;
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 52px;
+    color: #000;
+}
+
+.benefits-button {
+    background-color: #19DDEC;
+    border-style: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    left: 25%;
+    line-height: 52px;
+    color: #000;
+}
+
+.ethos-container-button {
+    border: none;
+    width: 10em;
+    padding: 5px;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color:#FD4505;
+    margin-top: 34px;
+    color:#000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card .btn {
+    border: none;
+    width: 16em;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color:#FD4505;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#card-five-btn {
+    margin-top: 14px;
+}
+
+/* Grow effect. Credit: Hover.css library */
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+
+.navbar-bg {
+    background-color: #DFF9FF;
+}
+
+/* The Navbar has different media queries to ensure readability and aesthetically pleasing margin spacing across different screens */
+
+@media screen and (min-width: 0px) {
+    .nav-link {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 1px;
+        color: #000;
+        padding: 3px;
+        margin-left: 7px;
+        margin-bottom: 10px;
+    }
+
+    .nav-item {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-link {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 7px;
+        color: #000;
+        margin-bottom: 0;
+    }
+
+    .nav-item {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1272px) {
+    .nav-link {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        color: #000;
+        margin-bottom: 0;
+    }
+}
+
+.navbar img {
+    margin: 8px 8px;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+.nav-join {
+    border: none;
+    border: none;
+    width: 8em;
+    padding: 5px;
+    border-radius: 50px;
+    margin-right: 15px;
+    background-color: #0043A8;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+.nav-join:hover {
+    background-color: #000;
+}
+
+.nav-active {
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    width: 2.5em;
+    height: 2.5em;
+        
+}
+
+/* credit: Below underline-circle-* code is based on this div lesson: http://www.corelangs.com/css/box/divindiv.html */
+
+/* The below media queries ensure the underline 'circle' can only be seen when on the full-length navigation bar, and not when the navbar is collapsed into the hamburger menu */
+
+@media screen and (max-width: 990px) {
+    .underline-circle-outer {
+        display: none;
+    }
+    
+    .underline-circle-inner {
+        display: none;
+      }
+
+    .underline-circle-outer-timetable {
+        display: none;
+    }
+    
+    .underline-circle-inner-timetable {
+        display: none;
+    }
+
+    .underline-circle-outer-pricing {
+        display: none;
+    }
+    
+    .underline-circle-inner-pricing {
+        display: none;
+    }
+
+    .underline-circle-outer-contact {
+        display: none;
+    }
+    
+    .underline-circle-inner-contact {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1271px) {
+    .underline-circle-outer {
+        position: absolute;
+        width: 79.375px;
+    }
+    
+    .underline-circle-inner {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+    
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (min-width: 1272px) {
+    .underline-circle-outer {
+        position: absolute;
+        width: 79.375px;
+        margin-left: 25px;
+    }
+    
+    .underline-circle-inner {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+    
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (max-width: 1271px) {
+    .underline-circle-outer-timetable {
+        position: absolute;
+        width: 125px;
+    }
+    
+    .underline-circle-inner-timetable {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+    
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (min-width: 1272px) {
+    .underline-circle-outer-timetable {
+        position: absolute;
+        width: 79.375px;
+        margin-left: 46px;
+    }
+    
+    .underline-circle-inner-timetable {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (max-width: 1271px) {
+    .underline-circle-outer-pricing {
+        position: absolute;
+        width: 88.109px;
+    }
+    
+    .underline-circle-inner-pricing {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (min-width: 1272px) {
+    .underline-circle-outer-pricing {
+        position: absolute;
+        width: 79.375px;
+        margin-left: 29px;
+    }
+
+    .underline-circle-inner-pricing {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (max-width: 1271px) {
+    .underline-circle-outer-contact {
+        position: absolute;
+        width: 88.109px;
+        margin-left: 10px;
+    }
+    
+    .underline-circle-inner-contact {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+    
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+@media screen and (min-width: 1272px) {
+    .underline-circle-outer-contact {
+        position: absolute;
+        width: 71.906px;
+        margin-left: 40px;
+  
+    }
+
+    .underline-circle-inner-contact {
+        width: 6px;
+        height: 6px;
+        background-color: #000;
+        border-radius: 50%;
+        margin-top: 5px;
+        clear: both;
+        margin: 0 auto;
+        position: relative;
+      }
+}
+
+/* credit: Learnt how to change colour of toggle icon from this tutorial: https://stackoverflow.com/questions/65161206/how-to-change-bootstrap-navbar-toggler-icon*/
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,67,168,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+/* HOME PAGE: HERO IMAGE */
+
+/* Credit for bg-image linear-gradient code: https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/
+Added linear-gradient to pass WAVE accessability tool contrast checker */
+
+.hero-image-cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url("../images/hero-image.webp");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero-image-text h1 {
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 4px;
+}
+
+.hero-image-text h3 {
+    color: white;
+    margin-top: 30px;
+}
+
+.hero-image-cta button {
+    border: none;
+    width: 8em;
+    padding: 5px;
+    border-radius: 50px;
+    background-color:#FD4505;
+    margin-top: 34px;
+    color:#000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* HOME PAGE: FEATURES SECTION */ 
+
+/* The below media query is to ensure that the features section and the hero image have enough clearance between them on tablet and up screens */
+
+@media screen and (min-width: 768px) {
+    .features-section {
+    margin-top: 80px;
+    } 
+}
+
+/* Credit for box-shadow code: https://www.w3schools.com/CSSref/css3_pr_box-shadow.asp */
+
+.features-card {
+    box-shadow: 1px 1px 20px 1px #d6d6d6;
+    padding: 0;
+}
+
+#card-pool ul li, #card-benefits ul li {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#card-pool .card-body, #card-benefits .card-body, .card {
+    border-radius: 25px;
+}
+
+/* Media query to ensure the Home page cards have suitable margins in tablet and desktop view */
+
+@media screen and (min-width: 768px) {
+    #card-pool, #card-benefits {
+        margin-left: 79.500px;
+        margin-right: 79.500px;
+        height: 400px;
+        } 
+}
+
+.home-features #card-header-pool {
+    background-color: #DFF9FF;
+    padding: 20px;
+}
+
+.home-features, .home-features .card-header{
+    background-color: #DFF9FF;
+    border-style: none;
+}
+
+.col #card-benefits {
+    border: none;
+}
+
+.features-container {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+/* HOMEPAGE: ETHOS SECTION */ 
+
+.ethos-container {
+    padding-top: 160px;
+    margin-bottom: 80px;
+}
+
+/* The purpose of the below grid is to make the tiled image effect seen in the ethos section of the Home page. Negative margins are used to achieve the 'dripping' effect seen in the image layout. */
+
+/* Credit: Learnt how to make CSS grids through this tutorial: https://www.w3schools.com/css/css_grid.asp*/
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.item-1 {
+    margin-top: -200px;
+  }
+
+.item-2 {
+    margin-top: -100px;
+}
+
+.item-4 {
+    margin-top: -200px;
+}
+
+.item-5 {
+    margin-top: -100px;
+}
+
+.ethos-image-grid {
+    margin-top: 100px;
+}
+
+.ethos-container h2 {
+    padding-bottom: 20px;
+}
+
+.ethos-container p {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .ethos-container {
+        margin-top: 10px;
+        padding-top: 0;
+    }
+}
+
+/* HOMEPAGE: LOCATION SECTION */
+
+.location-container ul {
+    list-style: none;
+}
+
+.location-container li {
+    font-size: 20px;
+}
+
+.location-container h2 {
+    padding-bottom: 30px;
+}
+
+.location-container .fas, .location-container .far  {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/* Media query below used to ensure proper margin spacing between list items in the location section of the home page */
+
+@media screen and (max-width: 767px) {
+    .location-container li {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Width had to be manually set for the embedded map to ensure the map didn't push out horizontal side of page on mobile view */
+
+.google-map {
+    width: 100%;
+    height: 480px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+
+.footer-container-desktop {
+    background-color: #0043A8;
+    color: #fff;
+    margin-top: 90px;
+    text-align: left;
+    height: 150px;
+}
+
+.footer-container-desktop ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.footer-container-desktop li {
+    justify-content:center;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.footer-ctas {
+    float: left;
+}
+
+.social-media-links {
+    float: right;
+    color: #fff;
+}
+
+.social-media-links i, .social-media-links-mobile i, .social-media-links li span, .social-media-links-mobile li span{
+    color: #fff;
+}
+
+.social-media-links i:hover, .social-media-links-mobile i:hover, .footer-ctas-mobile a:hover, .footer-ctas a:hover {
+    color: #FD4505;
+}
+
+.social-media-links li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.footer-ctas-mobile {
+    color: #fff;
+    position: absolute;
+    background-color: #0043A8;
+    color: #fff;
+    text-align: left;
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-ctas-mobile {
+    position: relative;
+    clear: both;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-ctas-mobile a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-text-mobile {
+    position: relative;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    background-color: #0043A8;
+    color: #fff; 
+}
+
+.social-media-links-mobile {
+    display: inline-flex;
+    margin: 0;
+    height: 20px;
+    width: 100vw;
+    list-style: none;
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 0;
+}
+
+.social-media-links-mobile li {
+    display: inline-flex;
+    font-size: 22px;
+    margin: 0 auto;
+
+}
+
+.footer-ctas a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ABOUT PAGE: HEADING IMAGE */
+
+/* Credit for image effect: tutorial from Code Institute */
+
+.about-wrapper-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/about-image-wrapper.webp') center center / cover no-repeat fixed;
+    width: 100%; 
+    height: 60vh;    
+}
+
+.about-wrapper-image h1 {
+    margin-top: 10%;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .about-wrapper-image h1 {
+        margin-top: 30%;
+    }
+}
+
+/* ABOUT PAGE: COMPANY VALUES SECTION */ 
+
+.about-value {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.about-value-text {
+    margin-top: 20px;
+}
+
+.about-value-text h2 {
+    margin-bottom: 70px;
+}
+
+.about-value-text p {
+    margin-bottom: 50px;
+}
+
+.about-value-text b {
+    font-size: 22px;
+}
+
+.about-facilities-intro h2 {
+    margin-bottom: 40px;
+}
+
+#founder-image {
+    width: 90%;
+}
+
+/* ABOUT PAGE: FACILITIES SECTION */ 
+
+.about-facilities-intro {
+    margin-bottom: 50px;
+}
+
+.card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    margin: 0 auto;
+}
+
+/* Fix: Fixed bug where the bottom of the cards of about.html would overlap the footer by lowering the min-width that the bottom media query would be called */
+
+@media screen and (min-width: 991px) {
+    .card {
+        margin-bottom: 100px;
+    }
+}
+
+.card ul li, .card p {
+    font-size: 16px;
+}
+
+.card h5 {
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.card .btn {
+    border: none;
+    width: 16em;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color:#FD4505;
+
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#card-five-btn {
+    margin-top: 14px;
+}
+
+
+/* FORM FOR MODAL AND CONTACT PAGE */ 
+
+.form {
+    display:block;
+}
+
+.form-input {
+    background-color: #F0F0F0;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+    height: 50px;
+}
+
+.form-input:focus {
+    background-color: white;
+}
+
+#query {
+    height: 170px;
+}
+
+/* Credit: Input and label display property: https://stackoverflow.com/questions/6046110/styling-form-with-label-above-inputs */
+
+input, label {
+    display: block;
+}
+
+#submit-button {
+    border: none;
+    width: 8em;
+    padding: 5px;
+    border-radius: 50px;
+    background-color:#FD4505;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+#reset-button {
+    border-width: 2px;
+    border-color: #FD4505;
+    border-style: solid;
+    width: 5em;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin-left: 15px;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+#contact-image-inner {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin-left: 120px;
+    border-radius: 50px;
+}
+
+/* TIMETABLE PAGE: TABLE */
+
+.table {
+    text-align: center;
+    vertical-align: top;
+}
+
+.table-cell-activity {
+    vertical-align: middle;
+}
+
+td.table-cell-activity-members-swim {
+    background-color: #0043A8;
+    border-radius: 20px;
+    color: #fff;
+}
+
+td.table-cell-activity-open-swim {
+    background-color: #DFF9FF;
+    border-radius: 20px;
+    color: #000;
+}
+
+td.table-cell-activity-training {
+    background-color: #19DDEC;
+    border-radius: 20px;
+    color: #000;
+}
+
+td.table-cell-activity-closed {
+    color: #6F6D6D;
+    letter-spacing: 5px;
+    padding-top: 1px;
+}
+
+tbody, td, tfoot, thead, tr {
+    border-style: solid;
+    border-color: #fff;
+    border-bottom-width: 4px;
+    border-top-width: 4px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-radius: 50px;
+}
+
+th {
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-color: #000;
+}
+
+.timetable-button {
+    border: none;
+    width: 15em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+    margin: 0 auto;
+    background-color:#FD4505;
+    margin-top: 34px;
+    color:#000;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+th.row-time {
+    padding-top: 1px;
+    vertical-align: top;
+    border-top-color: rgb(182, 182, 182);
+    border-top-width: 4px;
+    border-top-style: solid;
+    vertical-align: top
+}
+
+@media screen and (max-width: 767px) {
+    .further-info p {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+}
+
+/* PRICING PAGE */ 
+
+.members-card .card-header {
+    background-color: #19DDEC;
+    color: #000;
+    border-bottom: none;
+}
+
+.non-card .card-header {
+    background-color: #E6E6E3;
+    color: #000;
+    border-bottom: none;
+}
+
+.card-header:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.members-card {
+    border: 2px solid #19DDEC;
+    padding: 0;
+    border-radius: 19px;
+    box-shadow: 1px 1px 20px 1px #d6d6d6;
+}
+
+.non-card {
+    border: 2px solid #E6E6E3;
+    padding: 0;
+    border-radius: 19px;
+    box-shadow: 1px 1px 20px 1px #d6d6d6;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.non-card, .members-card {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+p.price-money {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 25px;
+}
+
+p.price-explanation {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.non-card ul, .members-card ul {
+    padding: 7px;
+    text-align: left;
+}
+
+.non-card ul li, .members-card ul li {
+    padding-bottom: 10px;
+}
+
+.price-button-member {
+    background-color: #19DDEC;
+    border-style: none;
+    width: 8em;
+    height: 2em;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.price-button-non {
+    background-color: #E6E6E3;
+    border-style: none;
+    width: 8em;
+    height: 2em;
+    border-radius: 50px;
+    line-height: 37px;
+    font-size: 20px;
+}
+
+.card-img-training {
+    border-radius: 50%;
+}
+
+/* This to ensure margins and heights maintain consistent and visually pleasing at various screen sizes */
+
+@media screen and (min-width: 425px) {
+    .non-price {
+        margin-top: 100px;
+    }
+} 
+
+@media screen and (min-width: 768px) {
+    .card {
+        height: 579px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .card {
+        height: 455px;
+    }
+} 
+
+.container-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* MODAL */ 
+
+@media screen and (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1000px;
+    }
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body {
+    margin-left: 10px;
+}
+
+/* 404 PAGE */ 
+
+.error-text {
+    color: #fff;
+    margin-top: 100px;
+}
+
+#error-footer {
+    margin-top: 0;
+}
+
+.error-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url("../images/error-background.webp");
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center; 
+    margin: 0 auto;
+    padding-top: 30px;
+}
